@@ -1,0 +1,328 @@
+/* ===========================================
+   1. RESET BÁSICO E CONFIGURAÇÕES GERAIS
+=========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #F4F6F8;
+    color: #333333;
+}
+
+/* ===========================================
+   2. ESTRUTURA BASE (Desktop / Padrão)
+=========================================== */
+header {
+    background-color: #004A8D; /* Azul SENAI */
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #003366 5px solid;
+    position: relative;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none; /* Oculto no PC */
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #FFFFFF;
+    user-select: none;
+}
+
+/* Links do Menu no Desktop */
+.menu-links {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #F37021; /* Laranja SENAI */
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: #D15B17 3px solid;
+    font-weight: bold;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-links a:hover, .menu-links a:active {
+    background-color: #D15B17;
+    transform: scale(0.95);
+}
+
+/* Conteúdo Principal */
+main {
+    background-color: #FFFFFF;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px 50px;
+    border-radius: 10px;
+    border: 2px solid #004A8D;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+main h1 {
+    text-align: center;
+    color: #004A8D;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #F37021;
+    border-bottom: 3px solid #004A8D;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-top: 15px;
+    border: #004A8D 3px solid;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ===========================================
+   3. MEDIA QUERIES RESPONSIVAS
+=========================================== */
+
+/* -------------------------------------------
+   A) PC / MONITORES GRANDES (+1281px)
+------------------------------------------- */
+@media (min-width: 1281px) {
+    header {
+        padding: 20px 60px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .menu-links a {
+        padding: 12px 18px;
+        font-size: 0.95rem;
+    }
+
+    main {
+        max-width: 1200px;
+        padding: 50px 70px;
+    }
+}
+
+/* -------------------------------------------
+   B) NOTEBOOKS / LAPTOPS (1025px até 1280px)
+   * Ajusta o tamanho dos botões na horizontal sem quebrar
+------------------------------------------- */
+@media (max-width: 1280px) and (min-width: 1025px) {
+    header {
+        padding: 15px 25px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .menu-links {
+        gap: 8px; /* Reduz espaço entre botões */
+    }
+
+    .menu-links a {
+        padding: 8px 12px; /* Reduz o tamanho dos botões */
+        font-size: 0.82rem;
+        border-width: 2px;
+    }
+
+    main {
+        max-width: 950px;
+        padding: 35px 40px;
+    }
+}
+
+/* -------------------------------------------
+   C) TABLETS (768px até 1024px)
+   * Ativa o Menu Sanduíche estilo gaveta suspenso
+------------------------------------------- */
+@media (max-width: 1024px) and (min-width: 768px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    /* Exibe o ícone de três listras */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Menu Suspenso estilo Loja Virtual */
+    .menu-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #004A8D;
+        border-bottom: #003366 5px solid;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 25px;
+
+        /* Estado fechado com animação suave */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        box-shadow: 0px 10px 15px rgba(0,0,0,0.25);
+    }
+
+    /* Linhas divisórias entre as opções */
+    .menu-links li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 6px 0;
+    }
+
+    .menu-links li:last-child {
+        border-bottom: none;
+    }
+
+    /* Estado aberto ao clicar */
+    #menu-toggle:checked ~ .menu-links {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .menu-links a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 1rem;
+        display: block;
+    }
+
+    main {
+        max-width: 90%;
+        padding: 30px 30px;
+        margin: 30px auto;
+    }
+}
+
+/* -------------------------------------------
+   D) SMARTPHONES (Até 767px)
+   * Otimizado para telas sensíveis ao toque
+------------------------------------------- */
+@media (max-width: 767px) {
+    header {
+        padding: 12px 18px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 2rem;
+    }
+
+    /* Menu Suspenso em lista vertical para toque fácil */
+    .menu-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #004A8D;
+        border-bottom: #003366 5px solid;
+        flex-direction: column;
+        gap: 0;
+        padding: 5px 15px;
+
+        /* Estado fechado */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        box-shadow: 0px 8px 12px rgba(0,0,0,0.3);
+    }
+
+    /* Linhas divisórias finas estilo loja virtual */
+    .menu-links li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 4px 0;
+    }
+
+    .menu-links li:last-child {
+        border-bottom: none;
+    }
+
+    /* Quando ativado pelo toque no ícone */
+    #menu-toggle:checked ~ .menu-links {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .menu-links a {
+        width: 100%;
+        text-align: center;
+        padding: 12px 10px;
+        font-size: 0.95rem;
+        display: block;
+    }
+
+    main {
+        max-width: 90%;
+        padding: 20px 15px;
+        margin: 15px auto;
+    }
+
+    main h1 {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
