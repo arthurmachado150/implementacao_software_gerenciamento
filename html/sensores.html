@@ -28,23 +28,191 @@
     
     <!-- CONTEÚDO CENTRALIZADO -->
     <main>
-        <h1>Sensores</h1>
+        <h1>SENSORES INDUSTRIAIS</h1>
         
         <section>
-            <h2>Educação e Tecnologia</h2>
-            <p>O conteúdo aqui fica centralizado e elegante, flutuando sobre o fundo da página como no seu código antigo, mas com as cores oficiais.</p>
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800" alt="Tecnologia">
+            <h2>Sensores</h2>
+            <p class="frase_espacamento">Sensores são dispositivos sensíveis a alguma forma de energia do ambiente, como luz, calor, som, velocidade ou força, fornecendo informações relacionadas a uma grandeza que precisa ser medida.</p>
+            <p>Entre as grandezas que podem ser medidas estão temperatura, pressão, velocidade, vazão, corrente, aceleração, posição, viscosidade, umidade e pH.</p>
         </section>
 
         <section>
-            <h2>Inovação Constante</h2>
-            <p>Teste redimensionar a tela para ver o menu sanduíche aparecendo e as margens se ajustando de PCs para Celulares.</p>
+            <h2 class="h2_diferente">Classificação dos Sensores</h2>
+
+            <section class="section_diferente">
+                <h3>SENSORES DIGITAIS ou BINÁRIOS</h3>
+                <p class="frase_espacamento">Possuem uma saída que assume dois estados lógicos, 0 ou 1, caracterizando uma saída do tipo liga-desliga.</p>
+                <p><strong>Exemplos:</strong> chaves fim de curso, sensores indutivos, capacitivos e ópticos.</p>
+            </section>
+
+            <section class="section_diferente">
+                <h3>SENSORES ANALÓGICOS</h3>
+                <p>Possuem uma saída contínua, relacionada à grandeza física presente na entrada.</p>
+            </section>
+            
         </section>
+
+        <section>
+            <h2 class="h2_diferente">NPN, PNP, NA e NF</h2>
+
+            <section class="section_diferente">
+                <h3>PNP</h3>
+                <p>No chaveamento <strong>PNP (Sourcing)</strong>, ao detectar o objeto, o sensor envia o potencial positivo (<strong>+Vcc</strong>) para a carga ou para a entrada do CLP.</p>
+            </section>
+
+            <section class="section_diferente">
+                <h3>NPN</h3>
+                <p>No chaveamento <strong>NPN (Sinking)</strong>, ao detectar o objeto, o sensor conecta a carga ao polo negativo (<strong>0 V/GND</strong>).</p>
+            </section>
+
+            <section class="section_diferente">
+                <h3>NA e NF</h3>
+                <p><strong>NA</strong> significa <strong>Normalmente Aberto</strong> e <strong>NF</strong> significa <strong>Normalmente Fechado</strong>. Essas denominações indicam o estado normal do contato do dispositivo.</p>
+            </section>
+
+        </section>
+        
+        <section>
+            <h2>Fluxo da Informação em Sensores</h2>
+            <p><strong>Sensor</strong> → <strong>Conversão da Variável</strong> → <strong>Processamento do Sinal</strong> → <strong>Transmissão da Informação</strong> → <strong>Apresentação da Informação</strong></p>
+        </section>
+        
+        <section>
+            <h2>Sensores Indutivos</h2>
+            <p class="frase_espacamento">Sensores indutivos são equipamentos eletrônicos capazes de detectar a aproximação de peças metálicas.</p>
+            <p class="frase_espacamento">A detecção ocorre sem contato físico entre o sensor e o acionador, aumentando a vida útil do sensor.</p>
+        
+            <section class="section_diferente">
+                <h3>PRINCÍPIO DE FUNCIONAMENTO</h3>
+                <p>O funcionamento baseia-se na geração de um campo eletromagnético de alta frequência, desenvolvido por uma bobina ressonante instalada na face sensora.</p>
+            </section>
+        
+            <section class="section_diferente">
+                <h3>APLICAÇÕES E ESPECIFICAÇÕES</h3>
+                <p></p>
+            </section>
+
+        </section>
+        
+        <section>
+            <h2>Sensores Capacitivos</h2>
+            <p class="frase_espacamento">Sensores de proximidade capacitivos são equipamentos eletrônicos capazes de detectar a presença ou aproximação de materiais como orgânicos, plásticos, pós, líquidos, madeiras e papéis.</p>
+        
+            <section class="section_diferente">
+                <h3 class="h3_diferente">MATERIAL A SER DETECTADO</h3>
+                <img src="../img/tabela_comparacao_caracteristicas_dieletricas_sensor_capacitivo.jpg" alt="" width="900px">
+                
+                <p>A tabela mostra uma comparação das características dielétricas de diferentes materiais e indica a realização de testes para determinar a distância sensora para o acionador utilizado.</p>
+            </section>
+        
+            <section class="section_diferente">
+                <h3>PERMISSIVIDADE ELÉTRICA NO VÁCUO (Ε₀)</h3>
+                <p class="frase_espacamento_dois">A permissividade elétrica no vácuo é uma constante fundamental utilizada nos princípios físicos dos sensores capacitivos.</p>
+                <p class="frase_espacamento_dois"><strong>ε₀ ≈</strong> 8,854 × 10⁻¹² F/m</p>
+                <p>A unidade de medida é <strong>farad por metro (F/m)</strong>.</p>
+            </section>
+        
+            <section class="section_diferente">
+                <h3>APLICAÇÕES E ESPECIFICAÇÕES</h3>
+                <p></p>
+            </section>
+
+        </section>
+        
+        <section>
+            <h2>Sensores Ópticos</h2>
+            <p class="frase_espacamento">Sensores ópticos baseiam-se na transmissão e recepção de luz, que pode ser refletida ou interrompida por um objeto a ser detectado.</p>
+        
+            <section class="section_diferente">
+                <h3>TRANSMISSOR</h3>
+                <p>O transmissor envia o feixe de luz através de um fotodiodo, que emite flashes com alta potência e curta duração. Isso ajuda a evitar que o receptor confunda a luz emitida com a iluminação ambiente.</p>
+            </section>
+        
+            <section class="section_diferente">
+                <h3>RECEPTOR</h3>
+                <p>O receptor é composto por um fototransistor sensível à luz. Em conjunto com um filtro sintonizado na mesma frequência de pulsação dos flashes do transmissor, permite que o receptor reconheça a luz proveniente do transmissor.</p>
+            </section>
+        
+            <section class="section_diferente">
+                <h3 class="h3_diferente">COR E MATERIAL DO ACIONADOR</h3>
+                <img src="../img/cor_material_sensor_optico.jpg" alt="" width="900px">
+                <p class="frase_espacamento_dois"><strong>• Alta Refletividade:</strong> Cores claras e superfícies metálicas polidas mantêm ou aumentam a distância de detecção nominal do sensor.</p>
+                <p class="frase_espacamento_dois"><strong>• Alta Absorção:</strong> Cores escuras e materiais porosos/opacos absorvem a luz emitida, reduzindo drasticamente o alcance útil.</p>
+                <p><strong>• Cálculo do Alcance Real:</strong> O alcance real (Sᵣ) é obtido multiplicando o alcance nominal (Sₙ) fornecido pelo fabricante pelos fatores correspondentes: Sᵣ = Sₙ × F꜀ × Fₘ
+                    </p>
+            </section>
+        
+            <section class="section_diferente">
+                <h3>APLICAÇÕES E ESPECIFICAÇÕES</h3>
+                <p></p>
+            </section>
+
+        </section>
+        
+        <section>
+            <h2>Face Sensora</h2>
+            <p class="frase_espacamento_dois">A face sensora é a área física frontal do sensor a partir da qual o campo de detecção é emitido e captado. Esse campo pode ser eletromagnético, eletrostático, óptico ou acústico, dependendo do princípio de funcionamento.</p>
+            <p>O termo é utilizado especificamente para sensores de proximidade, como sensores indutivos, capacitivos, fotoelétricos e ultrassônicos.</p>
+        </section>
+        
+        <section>
+            <h2>Distância Sensora (Sₙ)</h2>
+            <p>A distância sensora nominal <strong>(Sₙ)</strong> é a distância nominal máxima na qual o sensor detecta a presença de um alvo padrão alinhado à sua face sensora.</p>
+        </section>
+        
+        <section>
+            <h2>Alvo Padrão (Standard Target)</h2>
+            <p class="frase_espacamento_dois">O alvo padrão é um objeto normalizado utilizado pelo fabricante para medir e especificar a distância sensora nominal <strong>(Sₙ)</strong>.</p>
+
+            <section class="section_diferente">
+                <h3>Sensores Indutivos</h3>
+                <p>Para sensores indutivos, o alvo padrão é uma chapa quadrada de aço carbono (<strong>FE 360</strong> / <strong>SAE 1020</strong>), com 1 mm de espessura e lado igual ao diâmetro da face sensora ou <strong>3 × Sₙ</strong>, considerando o que for maior.</p>
+            </section>
+
+            <section class="section_diferente">
+                <h3>Sensores Capacitivos</h3>
+                <p>Para sensores capacitivos, o alvo padrão é uma chapa quadrada de aço carbono (<strong>FE 360</strong> / <strong>SAE 1020</strong>) aterrada, com 1 mm de espessura e lado igual ao diâmetro da face sensora ou <strong>3 × Sₙ</strong>, considerando o que for maior.</p>
+            </section>
+
+            <section class="section_diferente">
+                <h3>Sensores Ópticos</h3>
+                <p></p>
+            </section>
+
+        </section>
+        
+        <section>
+            <h2>Fator de Atenuação / Fator de Correção</h2>
+            <p class="frase_espacamento_dois">É um multiplicador, geralmente menor que 1, aplicado à distância sensora nominal para determinar o alcance real de detecção quando o objeto é constituído de material diferente do alvo padrão.</p>
+            
+            <section class="section_diferente">
+                <p class="frase_espacamento_dois"><strong>• Aço carbono:</strong> 1,0 (100% da distância Sₙ)</p>
+                <p class="frase_espacamento_dois"><strong>• Aço inoxidável:</strong> aproximadamente 0,60 a 0,80</p>
+                <p class="frase_espacamento_dois"><strong>• Latão:</strong> aproximadamente 0,35 a 0,50</p>
+                <p class="frase_espacamento_dois"><strong>• Alumínio:</strong> aproximadamente 0,30 a 0,45</p>
+                <p><strong>• Cobre:</strong> aproximadamente 0,25 a 0,40</p>
+            </section>
+
+            <p>A alteração do alcance ocorre devido às propriedades elétricas e magnéticas dos diferentes materiais.</p>
+        </section>
+        
+        <section>
+            <h2>Relação entre os Principais Sensores</h2>
+            <p class="frase_espacamento_dois">Os sensores indutivos, capacitivos e ópticos são sensores de proximidade abordados na apresentação, mas utilizam princípios diferentes para realizar a detecção:</p>
+            
+            <section class="section_diferente">
+                <p class="frase_espacamento_dois"><strong>• Indutivo:</strong> utiliza um campo eletromagnético e é destinado à detecção de peças metálicas.</p>
+                <p class="frase_espacamento_dois"><strong>• Capacitivo:</strong> detecta a presença ou aproximação de diferentes materiais, considerando suas características dielétricas.</p>
+                <p><strong>• Óptico:</strong> utiliza transmissão e recepção de luz, podendo detectar objetos por reflexão ou interrupção do feixe.</p>
+            </section>
+
+        </section>
+        
     </main>
 
     <!-- RODAPÉ -->
     <footer>
-        <p>&copy; 2026 Portal SENAI - Layout Responsivo</p>
+        <p>Arthur Furtado Machado &trade; &copy;</p>
     </footer>
 
 </body>
