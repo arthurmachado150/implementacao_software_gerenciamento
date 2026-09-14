@@ -84,12 +84,16 @@
         
             <section class="section_diferente">
                 <h3>PRINCÍPIO DE FUNCIONAMENTO</h3>
-                <p>O funcionamento baseia-se na geração de um campo eletromagnético de alta frequência, desenvolvido por uma bobina ressonante instalada na face sensora.</p>
+                <p class="frase_espacamento_dois">O funcionamento baseia-se na geração de um campo eletromagnético de alta frequência na face sensora, produzido por uma bobina interna associada a um circuito oscilador.</p>
+                <p class="frase_espacamento_dois">Quando um objeto metálico aproxima-se da face sensora, correntes parasitas (correntes de Foucault) são induzidas em sua superfície, absorvendo energia do campo e reduzindo a amplitude das oscilações.</p>
+                <p>Um circuito avaliador interno detecta essa diminuição na amplitude e comuta o sinal elétrico de saída do sensor.</p>
             </section>
         
             <section class="section_diferente">
                 <h3>APLICAÇÕES E ESPECIFICAÇÕES</h3>
-                <p></p>
+                <p class="frase_espacamento_dois"><strong>• Aplicações Principais:</strong> Detecção de engrenagens, contagem de peças metálicas em esteiras, controle de fim de curso em máquinas CNC (Comando Numérico Computadorizado) e monitoramento de posicionamento de válvulas.</p>
+                <p class="frase_espacamento_dois"><strong>• Materiais Detectáveis:</strong> Apenas materiais condutores/metálicos (aço, alumínio, latão, cobre, etc.).</p>
+                <p><strong>• Principais Especificações:</strong> Alta imunidade a sujeira, óleos e umidade; alcance de detecção curto (normalmente de 1 mm a 50 mm); alta durabilidade e frequência de comutação elevada.</p>
             </section>
 
         </section>
@@ -98,6 +102,13 @@
             <h2>Sensores Capacitivos</h2>
             <p class="frase_espacamento">Sensores de proximidade capacitivos são equipamentos eletrônicos capazes de detectar a presença ou aproximação de materiais como orgânicos, plásticos, pós, líquidos, madeiras e papéis.</p>
         
+            <section class="section_diferente">
+                <h3>PRINCÍPIO DE FUNCIONAMENTO</h3>
+                <p class="frase_espacamento_dois">O funcionamento baseia-se na geração de um campo eletrostático na face sensora, criado por eletrodos metálicos integrados ao circuito interno. O sensor atua essencialmente como um capacitor aberto.</p>
+                <p class="frase_espacamento_dois">Quando qualquer objeto (metálico ou não metálico) entra no campo eletrostático, ele altera a constante dielétrica do meio, provocando um aumento na capacitância (C) do circuito oscilador.</p>
+                <p>Essa alteração de capacitância eleva a amplitude de oscilação do circuito. Um detector interno identifica essa variação e comuta o sinal elétrico de saída do sensor.</p>
+            </section>
+
             <section class="section_diferente">
                 <h3 class="h3_diferente">MATERIAL A SER DETECTADO</h3>
                 <img src="../img/tabela_comparacao_caracteristicas_dieletricas_sensor_capacitivo.jpg" alt="" width="900px">
@@ -114,13 +125,15 @@
         
             <section class="section_diferente">
                 <h3>APLICAÇÕES E ESPECIFICAÇÕES</h3>
-                <p></p>
+                <p class="frase_espacamento_dois"><strong>• Aplicações Principais:</strong> Controle de nível de líquidos em reservatórios não metálicos, detecção de grãos e pós em silos, contagem de embalagens de papelão/plástico e verificação do conteúdo dentro de caixas fechadas.</p>
+                <p class="frase_espacamento_dois"><strong>• Materiais Detectáveis:</strong> Materiais metálicos e não metálicos (água, óleo, plástico, vidro, madeira, alimentos, etc.).</p>
+                <p><strong>• Principais Especificações:</strong> Possui trimpot para ajuste de sensibilidade; distância sensora de curto a médio alcance (2 mm a 25 mm); requer atenção com acúmulo de umidade e resíduos na face sensora.</p>
             </section>
 
         </section>
         
         <section>
-            <h2>Sensores Ópticos</h2>
+            <h2>Sensores Ópticos (Fotoelétricos)</h2>
             <p class="frase_espacamento">Sensores ópticos baseiam-se na transmissão e recepção de luz, que pode ser refletida ou interrompida por um objeto a ser detectado.</p>
         
             <section class="section_diferente">
@@ -134,17 +147,39 @@
             </section>
         
             <section class="section_diferente">
-                <h3 class="h3_diferente">COR E MATERIAL DO ACIONADOR</h3>
+                <h3 class="h3_diferente">COR E MATERIAL DO ACIONADOR (Sensor Óptico Difuso)</h3>
                 <img src="../img/cor_material_sensor_optico.jpg" alt="" width="900px">
                 <p class="frase_espacamento_dois"><strong>• Alta Refletividade:</strong> Cores claras e superfícies metálicas polidas mantêm ou aumentam a distância de detecção nominal do sensor.</p>
                 <p class="frase_espacamento_dois"><strong>• Alta Absorção:</strong> Cores escuras e materiais porosos/opacos absorvem a luz emitida, reduzindo drasticamente o alcance útil.</p>
-                <p><strong>• Cálculo do Alcance Real:</strong> O alcance real (Sᵣ) é obtido multiplicando o alcance nominal (Sₙ) fornecido pelo fabricante pelos fatores correspondentes: Sᵣ = Sₙ × F꜀ × Fₘ
-                    </p>
+                <p><strong>• Cálculo do Alcance Real:</strong> O alcance real (Sᵣ) é obtido multiplicando o alcance nominal (Sₙ) fornecido pelo fabricante pelos fatores correspondentes: Sᵣ = Sₙ × F꜀ × Fₘ</p>
+            </section>
+
+            <section class="section_diferente">
+                <h3>SENSOR ÓPTICO POR BARREIRA (THROUGH-BEAM)</h3>
+                <p class="frase_espacamento_dois"><strong>• Princípio de Funcionamento:</strong> O transmissor e o receptor são montados em corpos separados e instalados de frente um para o outro. A detecção ocorre no momento em que o objeto passa entre eles e interrompe o feixe de luz contínuo.</p>
+                <p class="frase_espacamento_dois"><strong>• Características:</strong> Oferece o maior alcance de detecção entre todos os tipos (chegando a dezenas de metros) e alta precisão. É imune à cor, textura ou brilho do objeto, exigindo apenas que o material seja opaco à luz.</p>
+                <p><strong>• Exemplo de Aplicação:</strong> Detecção de veículos em cancelas de pedágio, contagem de grandes volumes em esteiras e sistemas de segurança industrial.</p>
+            </section>
+
+            <section class="section_diferente">
+                <h3>SENSOR ÓPTICO RETROREFLEXIVO</h3>
+                <p class="frase_espacamento_dois"><strong>• Princípio de Funcionamento:</strong> O transmissor e o receptor ficam no mesmo corpo. O sensor projeta a luz contra um espelho prismático refletor instalado no lado oposto, que devolve a luz ao receptor. O objeto é detectado quando interrompe essa trajetória de luz refletida.</p>
+                <p class="frase_espacamento_dois"><strong>• Características:</strong> Facilita a instalação elétrica, pois só requer fiação em um dos lados da linha. Possui alcance intermediário e pode utilizar filtros polarizados para evitar falsos acionamentos por objetos muito brilhantes.</p>
+                <p><strong>• Exemplo de Aplicação:</strong> Linhas de envase de garrafas, detecção de paletes e sistemas de transporte onde não é viável passar cabos para o lado oposto.</p>
+            </section>
+
+            <section class="section_diferente">
+                <h3>SENSOR ÓPTICO DIFUSO</h3>
+                <p class="frase_espacamento_dois"><strong>• Princípio de Funcionamento:</strong> O transmissor e o receptor encontram-se no mesmo invólucro e não utilizam espelhos externos. O feixe luminoso é emitido e reflete diretamente na superfície do próprio objeto a ser detectado, retornando ao receptor.</p>
+                <p class="frase_espacamento_dois"><strong>• Características:</strong> É o modelo mais simples e rápido de instalar. No entanto, possui o menor alcance útil e seu funcionamento é totalmente dependente das características do objeto (cor, rugosidade e refletividade do material).</p>
+                <p><strong>• Exemplo de Aplicação:</strong> Identificação da presença de peças pequenas em células robotizadas, detecção de caixas próximas e verificação de nível de preenchimento.</p>
             </section>
         
             <section class="section_diferente">
                 <h3>APLICAÇÕES E ESPECIFICAÇÕES</h3>
-                <p></p>
+                <p class="frase_espacamento_dois"><strong>• Aplicações Principais:</strong> Contagem de itens em alta velocidade, linhas de embalagem, leitura de marcas de contraste/rótulos e cortinas de luz para proteção de operadores.</p>
+                <p class="frase_espacamento_dois"><strong>• Materiais Detectáveis:</strong> Qualquer objeto sólido ou opaco (ou transparentes quando utilizados sensores com refletores/filtros específicos).</p>
+                <p><strong>• Principais Especificações:</strong> Maior alcance entre os sensores de proximidade (até dezenas de metros no modo Barreira); resposta extremamente rápida; sensível ao acúmulo de poeira ou névoa nas lentes ópticas.</p>
             </section>
 
         </section>
@@ -176,7 +211,9 @@
 
             <section class="section_diferente">
                 <h3>Sensores Ópticos</h3>
-                <p></p>
+                <p class="frase_espacamento_dois"><strong>•</strong> Para sensores ópticos difusos, o alvo padrão é um papel branco fosco com 90% de refletância (Kodak White), com formato quadrado de 100 mm × 100 mm ou 200 mm × 200 mm, conforme a faixa de alcance nominal (<strong>Sₙ</strong>).</p>
+                <p class="frase_espacamento_dois"><strong>•</strong> Para sensores ópticos retroreflexivos, o alvo padrão é um refletor catadióptrico (<strong>espelho prismático</strong>) de modelo e dimensões especificados pelo fabricante.</p>
+                <p><strong>•</strong> Para sensores ópticos do tipo barreira, o alvo padrão é o próprio receptor óptico (para o <strong>teste de alcance</strong>) ou um corpo opaco com dimensão mínima especificada pelo fabricante para a interrupção do feixe.</p>
             </section>
 
         </section>
@@ -212,7 +249,7 @@
 
     <!-- RODAPÉ -->
     <footer>
-        <p>Arthur Furtado Machado &trade; &copy;</p>
+        <p>by Arthur Furtado Machado &trade; &copy;</p>
     </footer>
 
 </body>
