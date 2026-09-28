@@ -164,7 +164,7 @@ video {
     display: block;
     margin-top: 15px;
     border: #004A8D 3px solid;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .imagem_um {
@@ -184,6 +184,26 @@ video {
     display: block;
     margin-top: 15px;
     margin-bottom: 30px;
+}
+
+.imagem_tres {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-top: 15px;
+    border: #004A8D 3px solid;
+    margin-bottom: 15px;
+}
+
+.logo_senai_tamanho {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin-top: 0px;
+    border: #013c74 3px solid;
+    margin-bottom: 0px;
 }
 
 a {
@@ -220,9 +240,55 @@ footer {
         font-size: 2rem;
     }
 
+    /* Exibe o ícone de três listras */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Menu Suspenso estilo Loja Virtual */
+    .menu-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #004A8D;
+        border-bottom: #003366 5px solid;
+        flex-direction: column;
+        gap: 0;
+        padding: 20px 45px;
+
+        /* Estado fechado com animação suave */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        box-shadow: 0px 14px 21px rgba(0,0,0,0.25);
+    }
+
+    /* Linhas divisórias entre as opções */
+    .menu-links li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 10px 0;
+    }
+
+    .menu-links li:last-child {
+        border-bottom: none;
+    }
+
+    /* Estado aberto ao clicar */
+    #menu-toggle:checked ~ .menu-links {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
     .menu-links a {
-        padding: 12px 18px;
-        font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
+        padding: 12px 10px;
+        font-size: 1.25rem;
+        display: block;
     }
 
     main {
@@ -244,14 +310,55 @@ footer {
         font-size: 1.6rem;
     }
 
+    /* Exibe o ícone de três listras */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Menu Suspenso estilo Loja Virtual */
     .menu-links {
-        gap: 8px; /* Reduz espaço entre botões */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #004A8D;
+        border-bottom: #003366 5px solid;
+        flex-direction: column;
+        gap: 0;
+        padding: 15px 35px;
+
+        /* Estado fechado com animação suave */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        box-shadow: 0px 12px 18px rgba(0,0,0,0.25);
+    }
+
+    /* Linhas divisórias entre as opções */
+    .menu-links li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 8px 0;
+    }
+
+    .menu-links li:last-child {
+        border-bottom: none;
+    }
+
+    /* Estado aberto ao clicar */
+    #menu-toggle:checked ~ .menu-links {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     .menu-links a {
-        padding: 8px 12px; /* Reduz o tamanho dos botões */
-        font-size: 0.82rem;
-        border-width: 2px;
+        width: 100%;
+        text-align: center;
+        padding: 12px 10px;
+        font-size: 1.15rem;
+        display: block;
     }
 
     main {
@@ -315,8 +422,8 @@ footer {
     .menu-links a {
         width: 100%;
         text-align: center;
-        padding: 12px;
-        font-size: 1rem;
+        padding: 12px 10px;
+        font-size: 1.05rem;
         display: block;
     }
 
