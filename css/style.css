@@ -7,7 +7,16 @@
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #F4F6F8;
@@ -126,6 +135,72 @@ section {
     box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.08);
 }
 
+/* Cada <section> vira uma caixa/cartão individual */
+.section_diferente_product_owner {
+    background-color: #b5e2d1;
+    padding: 25px 30px;
+    margin-bottom: 30px; /* Distância entre uma seção e outra */
+    border-radius: 10px;
+    border: 2px solid #58caa4;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Cada <section> vira uma caixa/cartão individual */
+.section_diferente_scrum_master {
+    background-color: #8bb3e0;
+    padding: 25px 30px;
+    margin-bottom: 30px; /* Distância entre uma seção e outra */
+    border-radius: 10px;
+    border: 2px solid #0757b3;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Cada <section> vira uma caixa/cartão individual */
+.section_diferente_developers {
+    background-color: #e9db9c;
+    padding: 25px 30px;
+    margin-bottom: 30px; /* Distância entre uma seção e outra */
+    border-radius: 10px;
+    border: 2px solid #866f06;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* ===========================================
+   LISTAS DENTRO DAS SEÇÕES
+   Mantém marcadores e numeração dentro dos cartões
+=========================================== */
+section ul,
+section ol {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    list-style-position: outside;
+}
+
+section ul ul,
+section ul ol,
+section ol ul,
+section ol ol {
+    padding-left: 1.25rem;
+    margin-top: 0.35rem;
+    margin-bottom: 0.5rem;
+}
+
+section li {
+    max-width: 100%;
+    min-width: 0;
+    padding-left: 0.15rem;
+    margin-bottom: 0.4rem;
+    overflow-wrap: anywhere;
+}
+
+section li:last-child {
+    margin-bottom: 0;
+}
+
 /* Remove a margem inferior da última seção */
 section:last-child {
     margin-bottom: 0;
@@ -174,14 +249,76 @@ h4 {
     margin-bottom: 15px;
 }
 
-.h4_diferente {
-    color: #4351b9;
-    border-bottom: 2px solid #31008d;
+.h4_product_owner {
+    color: #17632d;
+    border-bottom: 2px solid #114e09;
     padding-bottom: 5px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 }
 
+.h4_scrum_master {
+    color: #055dd1;
+    border-bottom: 2px solid #0461b9;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.h4_developers {
+    color: #c97a04;
+    border-bottom: 2px solid #833d05;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #082838;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #334155;
+    background: #ffffff;
+}
+
+th, td {
+    border: 1px solid #cbd5e1;
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+th {
+    background: #e4faff;
+    color: #0f172a;
+    font-weight: 700;
+    text-align: center;
+}
+
+.td_negrito {
+    font-weight: bold;
+    text-align: center;
+}
+
+.td_centro {
+    text-align: center;
+}
+
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+tbody tr:hover {
+    background: #f1f5f9;
+}
+
+
 video {
+    width: auto;
     max-width: 100%;
     height: auto;
     border-radius: 8px;
@@ -452,9 +589,25 @@ footer {
     }
 
     main {
-        max-width: 90%;
-        padding: 25px 20px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px;
         margin: 20px auto;
+    }
+
+    section,
+    .section_diferente,
+    .section_diferente_02,
+    .section_diferente_product_owner,
+    .section_diferente_scrum_master,
+    .section_diferente_developers {
+        min-width: 0;
+        padding: 20px 18px;
+    }
+
+    img, video {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -464,10 +617,14 @@ footer {
 ------------------------------------------- */
 @media (max-width: 767px) {
     header {
-        padding: 12px 18px;
+        padding: 12px 14px;
+        gap: 10px;
     }
 
     header h1 {
+        min-width: 0;
+        white-space: normal;
+        overflow-wrap: anywhere;
         font-size: 1.3rem;
     }
 
@@ -523,16 +680,106 @@ footer {
     }
 
     main {
-        max-width: 90%;
-        padding: 20px 15px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
         margin: 15px auto;
     }
 
     main h1 {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
+        line-height: 1.25;
+        margin-bottom: 20px;
+        overflow-wrap: anywhere;
     }
 
     h2 {
         font-size: 1.2rem;
+    }
+
+    h2, h3, h4, p, li {
+        overflow-wrap: anywhere;
+    }
+
+    section,
+    .section_diferente,
+    .section_diferente_02,
+    .section_diferente_product_owner,
+    .section_diferente_scrum_master,
+    .section_diferente_developers {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 14px 12px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    /* Recuo proporcional para listas em telas estreitas */
+    section ul,
+    section ol {
+        padding-left: 1.25rem;
+        margin-top: 0.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    section ul ul,
+    section ul ol,
+    section ol ul,
+    section ol ol {
+        padding-left: 1rem;
+    }
+
+    section li {
+        padding-left: 0.1rem;
+        margin-bottom: 0.35rem;
+    }
+
+    img, video, iframe, embed, object {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Impede textos e elementos comuns de alargarem os cartões.
+       Exclui a estrutura da tabela para não comprimir suas células. */
+    section *:not(table):not(thead):not(tbody):not(tr):not(th):not(td),
+    .section_diferente *:not(table):not(thead):not(tbody):not(tr):not(th):not(td),
+    .section_diferente_02 *:not(table):not(thead):not(tbody):not(tr):not(th):not(td),
+    .section_diferente_product_owner *:not(table):not(thead):not(tbody):not(tr):not(th):not(td),
+    .section_diferente_scrum_master *:not(table):not(thead):not(tbody):not(tr):not(th):not(td),
+    .section_diferente_developers *:not(table):not(thead):not(tbody):not(tr):not(th):not(td) {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* A tabela mantém colunas legíveis; a rolagem fica dentro dela */
+    table {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        font-size: 14px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    th, td {
+        min-width: 95px;
+        padding: 8px 10px;
+        line-height: 1.45;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    /* Impede que palavras longas criem largura fora do cartão */
+    p, li, h1, h2, h3, h4, small, a {
+        overflow-wrap: anywhere;
+    }
+
+    footer {
+        padding: 16px 12px;
+        margin-top: 25px;
     }
 }
