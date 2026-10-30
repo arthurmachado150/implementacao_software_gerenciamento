@@ -88,6 +88,11 @@ nav {
     transform: scale(0.95);
 }
 
+.centralizar_fonte{
+    display: block;
+    text-align: center;
+}
+
 /* O <main> vira um container transparente que centraliza o conteúdo */
 main {
     max-width: 1100px;
@@ -333,9 +338,8 @@ video {
     height: auto;
     border-radius: 8px;
     display: block;
-    margin-top: 15px;
+    margin: 15px auto 30px auto; /* auto nas laterais = centralizado */
     border: #004A8D 3px solid;
-    margin-bottom: 30px;
 }
 
 .imagem_dois {
@@ -343,8 +347,7 @@ video {
     height: auto;
     border-radius: 8px;
     display: block;
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin: 15px auto 30px auto;
 }
 
 .imagem_tres {
@@ -352,9 +355,8 @@ video {
     height: auto;
     border-radius: 8px;
     display: block;
-    margin-top: 15px;
+    margin: 15px auto 15px auto;
     border: #004A8D 3px solid;
-    margin-bottom: 15px;
 }
 
 .logo_senai_tamanho {
